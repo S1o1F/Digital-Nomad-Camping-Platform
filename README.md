@@ -6,8 +6,8 @@
 
 | Phase | Name | 
 |------|------------------|
-| 01 | RelationalModel | 
-| 02 | DatabaseCreation | 
-| 03 | QueryOptimization | 
-| 04 | DatabaseProgramming | 
-| 05 | AdvancedPhase | 
+| 01 | [RelationalModel](./01RelationalModel) | 
+| 02 | [DatabaseCreation](./02DatabaseCreation) | 
+| 03 | [QueryOptimization](./03QueryOptimization) | 
+| 04 | [DatabaseProgramming](./04DatabaseProgramming) | 
+| 05 | [AdvancedPhase](./05AdvancedPhase) | 
