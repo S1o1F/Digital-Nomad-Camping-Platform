@@ -16,9 +16,9 @@ cursor = conn.cursor()
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Embeddings za Activity
+# Activity - name + description
 print("Generating embeddings for activities...")
-cursor.execute("SELECT activity_id, description FROM Activity WHERE description IS NOT NULL")
+cursor.execute("SELECT activity_id, name || ' - ' || COALESCE(description, name) FROM Activity")
 activities = cursor.fetchall()
 
 for activity_id, description in activities:
@@ -31,7 +31,7 @@ for activity_id, description in activities:
 conn.commit()
 print(f"Done! {len(activities)} activities executed.")
 
-# Embeddings za Service
+# Service
 print("Generating embeddings for services...")
 cursor.execute("SELECT serviceId, description FROM Service WHERE description IS NOT NULL")
 services = cursor.fetchall()
@@ -46,9 +46,9 @@ for service_id, description in services:
 conn.commit()
 print(f"Done! {len(services)} services executed.")
 
-# Embeddings za Equipment
-print("Generating embeddings for Equipment...")
-cursor.execute("SELECT equipmentId, description FROM Equipment WHERE description IS NOT NULL")
+# Equipment - name + description
+print("Generating embeddings for equipments...")
+cursor.execute("SELECT equipmentId, name || ' - ' || COALESCE(description, name) FROM Equipment")
 equipments = cursor.fetchall()
 
 for equipment_id, description in equipments:
