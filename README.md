@@ -9,5 +9,5 @@
 | 01 | [RelationalModel](./01RelationalModel) | 
 | 02 | [DatabaseCreation](./02DatabaseCreation) | 
 | 03 | [QueryOptimization](./03QueryOptimization) | 
-| 04 | [DatabaseProgramming](./04DatabaseProgramming) | 
+| 04 | [DatabaseProgramming](./04Functions,Procedures,Triggers) | 
 | 05 | [AdvancedPhase](./05AdvancedPhase) | 
